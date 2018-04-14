@@ -152,7 +152,7 @@ function configPatch {
    cat <<-EOF > /tmp/patch_00001
    /usr/bin/cp $(internalMasterConfigDir)/master-config.yaml $(internalMasterConfigDir)/master-config.orig.yaml
 
-   /usr/bin/openshift ex config patch $(internalMasterConfigDir)/master-config.orig.yaml --patch="$@" > $(internalMasterConfigDir)/master-config.yaml
+   /usr/bin/oc ex config patch $(internalMasterConfigDir)/master-config.orig.yaml --patch="$@" > $(internalMasterConfigDir)/master-config.yaml
 
    # TODO: Verify non empty contents or revert saved file
    if [ ! -s $(internalMasterConfigDir)/master-config.yaml ]; then
