@@ -95,7 +95,7 @@ function markRestart {
 
 function forceRestart {
    echo -n "Restarting openshift. "
-   docker stop origin &> /dev/null && docker start origin &> /dev/null
+   # docker stop origin &> /dev/null && docker start origin &> /dev/null
    echo "Done"
    # TODO: Check that restarted succesfully
    # Clear restart flag
